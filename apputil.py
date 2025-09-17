@@ -24,6 +24,7 @@ def fibonacci(n):
 
 # Test cases
 print(fibonacci(9))  # 34 
+print(fibonacci(12)) # 144
 
 
 #Exercise 2 : Write a (single) recursive function, to_binary(), that converts an integer into its binary representation

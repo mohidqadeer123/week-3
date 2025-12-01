@@ -69,10 +69,10 @@ def task_1():
     df['gender'] = df['gender'].astype(str).str.strip().str.lower()
 
     # Treat 'nan', 'none', '' as missing values
-    df['gender'] = df['gender'].replace({'nan': None, 'none':None, '': None})
+    df['gender'] = df['gender'].replace({'h': pd.NA, 'g': pd.NA, 'm': 'm', 'f': 'f', '?': pd.NA})
 
     # Calculate missing counts per column
-    missing_count = df.isna().sum()
+    missing_count = df.isnull().sum()
 
     # Sort columns by missing counts in ascending order
     sorted_cols = list(missing_count.sort_values().index)
